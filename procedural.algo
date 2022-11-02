@@ -1,0 +1,33 @@
+function dot_product(v1,v2) {
+
+     let ps =[]; 
+     const firstVector = v1;
+     const secondVector = v2;
+
+    for (let i = 0;  i < firstVector.length && i < secondVector.length; i++){
+         ps += v1[i] * v2[i]
+
+    }
+    return ps
+ 
+}
+
+console.log(dot_product([1,2,3], [1,2,3]))
+
+
+// number 2 
+
+function checkVectors(dot_product, x, y) {
+
+ //const products = dot_product - you can also save the fuction in a variable and invoke it later
+  // if the products of the vectors is equal, then they are orthogonal.
+
+    if(dot_product(x , y) == 0){
+      return console.log('vector is orthogonal')
+    } else{
+        return console.log('vector is not orthogonal')
+    }
+}
+
+console.log(checkVectors(dot_product,[1,2,3],[1,2,3]))
+
